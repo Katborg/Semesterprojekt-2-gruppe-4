@@ -4,8 +4,6 @@
 #include "BartenderUI.h"
 //#include "Mode.h"
 //#include "Skærm.h"
-//#include "ordre.h"
-
 
 class System
 {

@@ -31,11 +31,7 @@ void System::ModtagOrdre()
 void System::MarkerOrdreDone()
 {
 	ordreList.pop_front();
-/*
-	Cursor cursor2;
-	cursor2.cursorToXY(0, 16);
-	std::cout << " Ordre completet og fjernet";
-*/
+
 }
 
 /*void System::VisOrdre()
@@ -45,18 +41,7 @@ void System::MarkerOrdreDone()
 
 void System::RunSystem()
 {
-	//til test formål
-	ordreList.push_front(ordre("bajer", 5));
-	ordreList.push_front(ordre("drink", 5));
-	ordreList.push_front(ordre("bajer", 2));
-	ordreList.push_front(ordre("bajer", 3));
-	ordreList.push_front(ordre("drink", 2));
-	
-
-	bartender_.VisOrdre(ordreList); //opdatere ordre listen
-	
 	char tast = 0;
-
 	do{
 		tast = _getch();
 		switch (tast)
