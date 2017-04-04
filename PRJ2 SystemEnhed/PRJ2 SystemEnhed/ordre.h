@@ -1,30 +1,19 @@
 #pragma once
 #include <string>
 
-
-struct ordre
+class ordre
 {
 
-	std::string type;	//type som vi evt skal ændre til int så vi nemmer kan sende den
-	int antal;
+public:
 
-	
+	ordre(std::string type_ = "", int antal_ = 0);
+	std::string gettype() const;
+	int getantal() const;
+	bool operator != (const ordre &a) const;
 
-	ordre(std::string type = "", int antal = 0)
-		:type(type), antal(antal) {
+private:
+	std::string type_;	//type som vi evt skal ændre til int så vi nemmer kan sende den
+	int antal_;
 
-	}
-
-	friend std::ostream& operator << (std::ostream& out, const ordre &a) {
-
-		out << a.type << " antal: " << a.antal;
-		return out;
-
-	}
-
-	bool ordre::operator != (const ordre &a) const {
-
-		return !(type == a.type && antal == a.antal);
-
-	}
 };
+std::ostream& operator << (std::ostream& out, const ordre& a);

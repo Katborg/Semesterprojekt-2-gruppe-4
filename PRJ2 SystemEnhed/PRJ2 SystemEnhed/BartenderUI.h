@@ -7,7 +7,7 @@ class BartenderUI
 {
 public:
 	BartenderUI();
-	void VisOrdre(std::deque<ordre> &myOrdre);
+	void VisOrdre(std::deque<ordre> &showOrdre);
 
 };
 

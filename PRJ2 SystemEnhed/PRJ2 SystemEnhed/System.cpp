@@ -10,8 +10,8 @@ System::System(){}
 
 void System::ModtagOrdre()
 {
-	Cursor cursor;
-	cursor.cursorToXY(0, 16);
+	Cursor cursor1;
+	cursor1.cursorToXY(0, 16);
 
 	std::string type;
 	int antal = 0;
@@ -23,7 +23,7 @@ void System::ModtagOrdre()
 
 	ordreList.push_back(ordre(type, antal));
 	
-	cursor.cursorToXY(0, 16);
+	cursor1.cursorToXY(0, 16);
 	std::cout << "                    \n                 \n                 \n                  \n";
 
 }
@@ -31,20 +31,21 @@ void System::ModtagOrdre()
 void System::MarkerOrdreDone()
 {
 	ordreList.pop_front();
-
-	Cursor cursor;
-	cursor.cursorToXY(0, 16);
+/*
+	Cursor cursor2;
+	cursor2.cursorToXY(0, 16);
 	std::cout << " Ordre completet og fjernet";
+*/
 }
 
-void System::VisOrdre()
+/*void System::VisOrdre()
 {
 
-}
+}*/
 
 void System::RunSystem()
 {
-	//for test formål
+	//til test formål
 	ordreList.push_front(ordre("bajer", 5));
 	ordreList.push_front(ordre("drink", 5));
 	ordreList.push_front(ordre("bajer", 2));
@@ -53,11 +54,11 @@ void System::RunSystem()
 	
 
 	bartender_.VisOrdre(ordreList); //opdatere ordre listen
-
+	
 	char tast = 0;
 
 	do{
-		tast = getch();
+		tast = _getch();
 		switch (tast)
 		{
 		case '1':		//Tast '1' for ny ordre.
@@ -69,6 +70,4 @@ void System::RunSystem()
 		}
 	bartender_.VisOrdre(ordreList);	//opdatere ordre listen
 	}while (tast != 'q' && tast != 'Q');
-
-
 }
