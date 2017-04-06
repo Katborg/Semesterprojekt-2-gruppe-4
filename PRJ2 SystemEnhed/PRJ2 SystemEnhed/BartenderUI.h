@@ -1,12 +1,13 @@
 #pragma once
-#include "System.h"
+#include <deque>
+#include "ordre.h"
+
 
 class BartenderUI
 {
 public:
-	BartenderUI(const System &ordre);
-	void VisOrdre();
-private:
-	System ordre_;
+	BartenderUI();
+	void VisOrdre(std::deque<ordre> &showOrdre);
+
 };
 

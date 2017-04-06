@@ -144,17 +144,20 @@
   <ItemGroup>
     <ClInclude Include="BartenderUI.h" />
     <ClInclude Include="Cursor.h" />
+<<<<<<< HEAD
     <ClInclude Include="Mode.h" />
     <ClInclude Include="ordre.h" />
     <ClInclude Include="Skærm.h" />
+=======
+    <ClInclude Include="ordre.h" />
+>>>>>>> refs/remotes/origin/banch1
     <ClInclude Include="System.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BartenderUI.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Mode.cpp" />
-    <ClCompile Include="Skærm.cpp" />
+    <ClCompile Include="ordre.cpp" />
     <ClCompile Include="System.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
